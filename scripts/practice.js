@@ -20,17 +20,27 @@ myFunction();
 
 
 //name,age,gender
-let student={
+
+let student1 = {
     name:"Kit",
     age:25,
-    gender:"female"
+    gender:"Female",
+    address:{
+        street:"Ave Palm",
+        zip:"29800"
+    },
+    hobbies:["listen music","play nintendo","complete FSDI assignments"]
 }
 
-console.log(student.name);
+
+
+console.log(student1);
 
 //dice
 let d4Dice={
-    color:"black",
+    color:{
+        
+    },
     shape:"triangle",
     numberOnDice:4
 }

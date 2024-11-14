@@ -66,14 +66,16 @@ body {
 .main-content{
     /*margin-left: 60px;
     margin-right: 60px;*/
-    padding: 100px;
+    padding: 250px;
     background-color: aliceblue;
     padding-top: 20px;;
     padding-bottom: 30px;
     text-wrap: wrap;
+
 }
 
 .content-grid{
+    margin-top: 150px;
     max-width: 1600px;
     display: flex;
 
@@ -111,8 +113,44 @@ body {
     padding-top: 30px;
     padding-left: 50px;
     padding-right: 50px;
+    font-size: 23px;
     text-wrap: wrap;
     padding-bottom: 20px;;
 }
+.btn-learn{
+    margin-left: 45px;
+    text-wrap: wrap;
+    height: 32px;
+    width:150px;
+    padding-left: 5px;
+    border-radius: 5px;
+    border-color: black;
+}
+.btn-learn:hover{
+    background-color: black;
+    color: aliceblue;
+}
+
+.content-grid-2{
+    margin-top: 150px;
+    max-width: 1600px;
+    display: flex;
+    background-color: antiquewhite;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.content-grid-2 img{
+    height: 600px;
+    width: 600px;
+    padding: 20px;
+    display:block;
+    text-align: left;
+    flex-direction: column;
+    flex-basis: 30%;
+}
 
 
+/*<img class="icon-img" src="./.png">
+                        <img class="icon-img" src="./.png">*/

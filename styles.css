@@ -3,11 +3,12 @@
 }
 
 body {
+    background: linear-gradient(-45deg, #ee7752, #ea65f7, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	height: 100vh;
-    background: linear-gradient(-45deg, #ee7752, #ea65f7, #23a6d5, #23d5ab);
 	animation: gradient 10s ease infinite;
 }
+
 
 @keyframes gradient {
 	0% {
@@ -20,25 +21,59 @@ body {
 		background-position: 0% 50%;
 	}
 }
+@keyframes fadein {
+    from {
+    opacity: 0;
+    transform: translateY(0)
+    }
+    20% {
+    transform: translateY(-20px)
+    }
+}
 
+@keyframes slideLeft {
+from {
+    opacity: 0;
+    transform: translateX(200px);
+} 
+to {
+    opacity: 1;
+    transform: translateX(0%);
+}
+}
 
 .top-bar{
     padding: 20px;
     font-size: 20px;
-    margin-top: 30px;
+    margin-top: 0px;
     margin-left: 80px;
     margin-right: 80px;
 	display:flex;
 	justify-content:space-between; 
 	align-items:center;
 }
+
+
 .top-bar a{
     font-size: 20px;
 }
+.nav-bar{
+    list-style-type: none;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+.top-bar img{
+    width:100px;
+}
 .font-hero-section{
+    margin-left: 15px;
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 10px 10px;
+    padding: 20px;
 
 }
 .hero-text{
@@ -51,21 +86,100 @@ body {
 }
 .font-hero-section img{
     width: 1200px;
+    animation: fadein 2s ease-in-out;
 
 }
 
 .font-hero-section h1{
     font-size: 60px;
-
+    animation: slideLeft 1.5s forwards;
 }
 .font-hero-section h5{
     padding: 20px;
     font-size: 36px;
+    animation: slideLeft 2s forwards;
+}
+.font-hero-section p{
+    animation: slideLeft 5s forwards;
+}
+/* Small devices (large phones breakpoint, "600"px up)-menu*/
+/* Small devices (large phones breakpoint, "600"px up)-menu*/
+@media(max-width:600px){
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    body {
+        background: linear-gradient(-45deg, #ee7752, #ea65f7, #23a6d5, #23d5ab);
+        height: 100vh;
+        animation: gradient 10s ease infinite;
+    }
+
+    .top-bar{
+        flex-direction: column;
+        padding: 5px;
+
+    }
+    .logo{
+        padding: 20px;
+        display: block;
+    }
+    .nav-bar{
+        justify-content: space-evenly;
+        text-wrap:wrap;
+    }
+
+    /*hero section*/
+    .font-hero-section{
+        margin-top:0px ;
+        padding: 0px;
+        display: flex;
+        padding: 1px;
+        text-wrap:wrap;
+    }
+
+    .font-hero-section {
+        display: block; /* Overrides grid display */
+        margin-left: 0;
+        padding: 20px;
+        text-wrap: wrap;
+    }
+
+    .font-hero-section h1 {
+        padding: 10px;
+        font-size: 26px;
+        margin-left: 20px;
+        text-align: center;
+        animation: slideLeft 1.5s forwards;
+    }
+    .font-hero-section h5 {
+        padding: 5px;
+        font-size: 16px;
+        animation: slideLeft 2s forwards;
+    }
+    .font-hero-section p {
+        padding: 5px;
+        animation: slideLeft 5s forwards;
+    }
+    .hero-image{
+        max-width: 500px; 
+        width: 100%; 
+        height: auto; 
+        margin: 0 auto; 
+        display: block; 
+        object-fit: contain; /* Make sure the image scales well within its box */
+    }
+    .hero-text {
+        margin-top: 0px;
+        padding: 0px;
+    }
+    .hero-text button{
+        animation: fadein 2s ease-in-out;
+    }
 
 }
+
 .main-content{
-    /*margin-left: 60px;
-    margin-right: 60px;*/
     padding: 250px;
     background-color: aliceblue;
     padding-top: 20px;;
@@ -78,9 +192,9 @@ body {
     margin-top: 150px;
     max-width: 1600px;
     display: flex;
-
     margin-left: auto;
     margin-right: auto;
+    animation: fadein 6s forwards;
 
 }
 
@@ -101,6 +215,7 @@ body {
     text-wrap: wrap;
 
 }
+
 
 .content-text h1{
     padding-top: 80px;
@@ -138,6 +253,7 @@ body {
     background-color: antiquewhite;
     margin-left: auto;
     margin-right: auto;
+    animation: fadein 8s ease-in;
 
 }
 
@@ -151,6 +267,214 @@ body {
     flex-basis: 30%;
 }
 
+@media(max-width:600px){
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .main-content{
+        /*margin-left: 60px;
+        margin-right: 60px;*/
+        padding: 10px;
+        background-color: aliceblue;
+        overflow: hidden;
+
+    }
+    
+    .content-grid{
+        margin: 0; /* Remove top and side margins */
+        padding: 0; /* Remove all padding */
+        display: flex;
+        flex-direction: column;
+        animation: fadein 7s forwards;
+        padding: 10px;
+    
+    }
+    .content-grid h1{
+        margin: 0; 
+        padding: 0; 
+        padding: 10px;
+    
+    }
+    
+    .content-grid img{
+        height: 300px;
+        width: 300px;
+        margin: 0; /* Remove top and side margins */
+        padding: 0; /* Remove all padding */
+        margin-top: 15px;
+        display:block;
+        flex-direction: column;
+        margin-left: 25%;
+
+    }
+    
+    .content-text{
+        margin: 0; 
+        padding: 0; 
+
+        text-align: center;
+        text-wrap: wrap;
+    
+    }
+
+    .content-text p{
+        padding-top: 30px;
+        padding-left: 50px;
+        padding-right: 50px;
+        font-size: 23px;
+        text-wrap: wrap;
+        padding-bottom: 20px;;
+    }
+    .btn-learn{
+        margin: 0; 
+        padding: 0; 
+        height: 32px;
+        width:150px;
+        padding-left: 5px;
+        border-radius: 5px;
+        border-color: black;
+    }
+    .content-grid-2{
+        margin: 0; 
+        padding: 0; 
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: antiquewhite;
+        margin-left: auto;
+        margin-right: auto;
+        animation: fadein 8s ease-in;
+        padding:10px;
+    
+    }
+    
+    .content-grid-2 img{
+        height: 300px;
+        width: 300px;
+        margin: 0; 
+        padding:0;
+        margin-top: 15px;
+        display:block;
+        flex-direction: column;
+        margin-left: 25%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
 
 /*<img class="icon-img" src="./.png">
-                        <img class="icon-img" src="./.png">*/
+<img class="icon-img" src="./.png">*/
+
+footer {
+    background: linear-gradient(-45deg, #ee7752, #ea65f7, #23a6d5, #23d5ab);
+    padding:30px;
+    text-align:center;
+    background-size: cover;
+    animation: gradient 10s ease infinite;
+}
+
+
+.socal ul{
+    list-style: none;
+    display: flex;
+    justify-content: center; 
+    padding: 25px;
+    margin: 0; 
+}
+.socal ul li {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 5px solid #D8E2DC;
+    transition: all 0.5s ease;
+}
+.socal ul li:hover.facebook {
+    border: 5px solid #4777df;
+    box-shadow: 0 0 15px #497ce9;
+    transition: all 0.5s ease;
+}
+    
+.socal ul li:hover .fa-facebook {
+    color: #3b5998;
+    text-shadow: 0 0 15px #3b5998;
+    transition: all 0.5s ease;
+}
+    
+/*twitter*/
+.socal ul li:hover.twitter {
+    border: 5px solid #00aced;
+    box-shadow: 0 0 15px #00aced;
+    transition: all 0.5s ease;
+}
+
+.socal ul li:hover .fa-twitter {
+    color: #00aced;
+    text-shadow: 0 0 15px #00aced;
+    transition: all 0.5s ease;
+}
+/* instagram */
+.socal ul li:hover.instagram {
+    border: 5px solid #bc2a8d;
+    box-shadow: 0 0 15px #bc2a8d;
+    transition: all 0.5s ease;
+}
+
+.socal ul li:hover .fa-instagram {
+    color: #bc2a8d;
+    text-shadow: 0 0 15px #bc2a8d;
+    transition: all 0.5s ease;
+}
+    
+/*Register Page*/
+.register{
+    padding: 50px;
+    padding: 250px;
+    background-color: aliceblue;
+    padding-top: 20px;;
+    padding-bottom: 30px;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.register-btns{
+    display: inline;
+}
+
+.register-footer{
+    background: linear-gradient(-45deg, #ee7752, #ea65f7, #23a6d5, #23d5ab);
+
+    color: aliceblue;
+    padding:40px;
+    text-align:center;
+    background-size: cover;
+    animation: gradient 10s ease infinite;
+}
+.headerDog-image{
+    width: 450px;
+    padding: 0px;
+
+
+}
+.footer-logo{
+    width: 100px;
+    padding: 10px;
+    padding-bottom: 20px;
+}

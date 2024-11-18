@@ -1,8 +1,5 @@
-
-
 let pets=[]
-
-
+//object literal
 let petSalon ={
     name:"The Fashion Pet",
     address:{
@@ -11,90 +8,66 @@ let petSalon ={
     }
 }
 
-//creating the pet
-let pet1={
-    name:"Scooby",
-    age:80,
-    gender:"Male",
-    service:{
-        body:"Bathing", 
-        hair:"Brushing",
-    },
-    breed:"Boxer"
+//object constructor
+function Pet(name, age, gender, breed, service, type){
+    this.name=name;
+    this.age=age;
+    this.gender=gender;
+    this.breed=breed;
+    this.service=service;
+    this.type=type;
 }
 
-let pet2={
-    name:"Scrappy",
-    age:20,
-    gender:"male",
-    service:{
-        body:"Bathing", 
-        hair:"Brushing",
-    },
-    breed:"Golden Retriver"
+
+//register fucntion
+function register(){
+    let inputName=document.getElementById("txtName").value;
+    let inputAge=document.getElementById("txtAge").value;
+    let inputGender=document.getElementById("txtGender").value;
+    let inputBreed=document.getElementById("txtBreed").value;
+    let inputService=document.getElementById("txtService").value;
+    let inputType=document.getElementById("txtType").value;
+    console.log(inputName,inputAge,inputGender,inputBreed,inputService, inputType);
+
+    //create the obj
+    let newPet = new Pet (inputName,inputAge,inputGender,inputBreed,inputService, inputType);
+
+    //push the obj to the array
+    pets.push(newPet);
+    //display the obj on the console
+    console.log(pets);
+
+    //clear an input: document.getElementById("txtName").value="";
+
+
 }
 
-let pet3={
-    name:"Mocha",
-    age:3,
-    gender:"male",
-    service:{
-        body:"Bathing", 
-        hair:"Brushing",
-        nail:"Trimming",
-    },
-    breed:"Malti-poo"
+function clearForm(){
+    document.getElementById("txtName").value="";
+    document.getElementById("txtAge").value="";
+    document.getElementById("txtGender").value="";
+    document.getElementById("txtBreed").value="";
+    document.getElementById("txtService").value="";
+    document.getElementById("txtType").value="";
 }
 
-pets.push(pet1,pet2,pet3);
 
-function totalCount(){
-    document.getElementById("nameResult").innerHTML = ""//clear previous result
-    document.getElementById("amountResult").innerHTML = ""//clear previous result
-    document.getElementById("avgAgeResult").innerHTML = ""//clear previous result
 
-    //total count displaying
-    document.getElementById("amountResult").innerHTML=`
-    <br>
-    Totally we have ${pets.length} pets.
-    </br>
-    `;
+//validation fucntion
+/**/
+
+
+
+function init(){
+    //execution code should be inside of this fucntion
+    let pet1= new Pet("Scooby",99,"Male","Boxer","Grooming","Dog");
+    let pet2= new Pet("Mocha",2,"Male","Maltipoo","Grooming", "Dog");
+    let pet3= new Pet("Snowball",12,"Female","Mixed","Vaccines","Cat");
+
+    console.log(pet1);
+    console.log(pet2);
+    console.log(pet3);
+
 }
 
-function displayPetNames(){
-    document.getElementById("nameResult").innerHTML = ""//clear previous result
-    document.getElementById("amountResult").innerHTML = ""//clear previous result
-    document.getElementById("avgAgeResult").innerHTML = ""//clear previous result
-
-    //loop function for search through array
-    for(i=0; i<pets.length; i++){
-
-    //name displaying
-    document.getElementById("nameResult").innerHTML+=`
-    <br>
-    We have ${pets[i].name}
-    <br>
-    `;
-    }
-}
-
-function ageAverage(){
-    document.getElementById("nameResult").innerHTML = ""//clear previous result
-    document.getElementById("amountResult").innerHTML = ""//clear previous result
-    document.getElementById("avgAgeResult").innerHTML = ""//clear previous result
-
-    //initial outside of loop to aviod reinitialization
-    let averAge=0;
-
-    //loop function for search through array, then caluate +=age/length
-    for(i=0; i<pets.length; i++){
-    averAge+=pets[i].age/pets.length;
-
-    //age result displaying
-    document.getElementById("avgAgeResult").innerHTML=`
-    <br>
-    Our dogs' average age is ${averAge.toFixed(2)} years old.
-    <br>
-    `;
-}
-}
+window.onload=init;//wait to render the HTML

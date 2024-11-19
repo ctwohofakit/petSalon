@@ -371,7 +371,6 @@ to {
 
 footer {
     background: linear-gradient(-45deg, #ee7752, #ea65f7, #23a6d5, #23d5ab);
-    padding:30px;
     text-align:center;
     background-size: cover;
     animation: gradient 10s ease infinite;
@@ -440,11 +439,10 @@ footer {
     background-color: aliceblue;
     padding-top: 20px;;
     padding-bottom: 30px;
-
     text-align: center;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 110vh;
 }
 .register-btns{
     display: inline;
@@ -452,9 +450,8 @@ footer {
 
 .register-footer{
     background: linear-gradient(-45deg, #ee7752, #ea65f7, #23a6d5, #23d5ab);
-
+    padding: 10px;
     color: aliceblue;
-    padding:40px;
     text-align:center;
     background-size: cover;
     animation: gradient 10s ease infinite;
@@ -483,11 +480,11 @@ footer {
         background-color: aliceblue;
         padding-top: 20px;;
         padding-bottom: 30px;
-    
         text-align: center;
         display: flex;
         flex-direction: column;
-        height: 100vh;
+        height: 150vh;
+
     }
     .col{
         display: flex;
@@ -510,5 +507,28 @@ footer {
 
 
 
+
+}
+.row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.card{
+    background: linear-gradient(-45deg,  #f5b9fa, #5df8d4);
+    margin-top: 20px;
+}
+
+.card-body{
+    background: white;
+
+
+
+}
+
+.error {
+
+    background-color: rgb(248, 210, 210);
 
 }

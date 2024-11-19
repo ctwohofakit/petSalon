@@ -18,6 +18,24 @@ function Pet(name, age, gender, breed, service, type){
     this.type=type;
 }
 
+//validation fucntion
+function isValid(pet){
+    let validation =true;
+    let inputName= document.getElementById("txtName");
+    let inputAge= document.getElementById("txtAge");
+
+
+    if(pet.name == ""){
+        validation = false;
+        inputName.classList.add("error");
+
+    }
+    if(pet.age == ""){
+        validation = false;
+        inputAge.classList.add("error");
+    }
+    return validation;
+}
 
 //register fucntion
 function register(){
@@ -31,14 +49,17 @@ function register(){
 
     //create the obj
     let newPet = new Pet (inputName,inputAge,inputGender,inputBreed,inputService, inputType);
+    if (isValid(newPet)==true){
+    
+        //push the obj to the array
+        pets.push(newPet);
+        //display the obj on the console
+        console.log(pets);
+        displayPet();
 
-    //push the obj to the array
-    pets.push(newPet);
-    //display the obj on the console
-    console.log(pets);
-
-    //clear an input: document.getElementById("txtName").value="";
-
+        //clear
+        clearForm();
+    }
 
 }
 
@@ -53,8 +74,7 @@ function clearForm(){
 
 
 
-//validation fucntion
-/**/
+
 
 
 
@@ -64,9 +84,9 @@ function init(){
     let pet2= new Pet("Mocha",2,"Male","Maltipoo","Grooming", "Dog");
     let pet3= new Pet("Snowball",12,"Female","Mixed","Vaccines","Cat");
 
-    console.log(pet1);
-    console.log(pet2);
-    console.log(pet3);
+    pets.push(pet1,pet2,pet3);
+
+    displayPet();
 
 }
 

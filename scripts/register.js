@@ -23,7 +23,10 @@ function isValid(pet){
     let validation =true;
     let inputName= document.getElementById("txtName");
     let inputAge= document.getElementById("txtAge");
-
+    let inputGender= document.getElementById("txtGender");
+    let inputBreed= document.getElementById("txtBreed");
+    let inputService= document.getElementById("txtService");
+    let inputType= document.getElementById("txtType");
 
     if(pet.name == ""){
         validation = false;
@@ -34,6 +37,29 @@ function isValid(pet){
         validation = false;
         inputAge.classList.add("error");
     }
+    if(pet.gender == ""){
+        validation = false;
+        inputGender.classList.add("error");
+    }
+    if(pet.breed == ""){
+        validation = false;
+        inputBreed.classList.add("error");
+    }
+    if(pet.service == ""){
+        validation = false;
+        inputService.classList.add("error");
+    }
+    if(pet.type == ""){
+        validation = false;
+        inputType.classList.add("error");
+    }
+
+
+
+
+
+
+
     return validation;
 }
 
@@ -53,9 +79,14 @@ function register(){
     
         //push the obj to the array
         pets.push(newPet);
+
         //display the obj on the console
         console.log(pets);
-        displayPet();
+
+        //displayPet();
+        //displayRow instead of display card
+        displayRow();
+    
 
         //clear
         clearForm();
@@ -86,7 +117,8 @@ function init(){
 
     pets.push(pet1,pet2,pet3);
 
-    displayPet();
+    //displayPet();
+    displayRow();
 
 }
 

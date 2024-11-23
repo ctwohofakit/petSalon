@@ -370,7 +370,7 @@ to {
 
 
 footer {
-    background: linear-gradient(-45deg, #ee7752, #ea65f7, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #ea65f7, #23a6d5, #23d5ab);
     text-align:center;
     background-size: cover;
     animation: gradient 10s ease infinite;
@@ -396,27 +396,27 @@ footer {
     transition: all 0.5s ease;
 }
 .socal ul li:hover.facebook {
-    border: 5px solid #4777df;
-    box-shadow: 0 0 15px #497ce9;
+    border: 5px solid #19e2e2;
+    box-shadow: 0 0 15px #19e2e2;
     transition: all 0.5s ease;
 }
     
 .socal ul li:hover .fa-facebook {
-    color: #3b5998;
-    text-shadow: 0 0 15px #3b5998;
+    color: #1255e7;
+    text-shadow: 0 0 15px #19e2e2;
     transition: all 0.5s ease;
 }
     
 /*twitter*/
 .socal ul li:hover.twitter {
-    border: 5px solid #00aced;
-    box-shadow: 0 0 15px #00aced;
+    border: 5px solid #6700ed;
+    box-shadow: 0 0 15px #6700ed;
     transition: all 0.5s ease;
 }
 
 .socal ul li:hover .fa-twitter {
-    color: #00aced;
-    text-shadow: 0 0 15px #00aced;
+    color: #6700ed;
+    text-shadow: 0 0 15px #6700ed;
     transition: all 0.5s ease;
 }
 /* instagram */
@@ -436,7 +436,7 @@ footer {
 .register{
     padding: 50px;
     padding: 250px;
-    background-color: aliceblue;
+    background-color: rgb(247, 240, 232);
     padding-top: 20px;;
     padding-bottom: 30px;
     text-align: center;
@@ -531,4 +531,64 @@ footer {
 
     background-color: rgb(248, 210, 210);
 
+}
+
+.contact-form {
+    height: 53vh;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Form Title */
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: #444;
+}
+
+/* Labels */
+.contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Input Fields */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Submit Button */
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #183452;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #141618;
+}
+.content-grid-3{
+    display: grid;
+    background-color: rgb(247, 240, 232);
+    margin-left: auto;
+    margin-right: auto;
+}
+.table{
+    margin:0;
+    padding: 0;
 }

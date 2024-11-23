@@ -9,7 +9,7 @@
     <!--Add favicon-->
     <link rel="icon" href="./img/favicon.png" type="png">
     <title>The Fashion Pet-Register</title>
-    <title>Register</title>
+
 </head>
 
 <body>
@@ -22,7 +22,7 @@
                     <a href="register.html" class="btn btn-outline-light">Register</a>
                     <a href="#" class="btn btn-outline-light">Service</a>
                     <a href="#" class="btn btn-outline-light">About Us</a>
-                    <a href="#" class="btn btn-outline-light">Contact</a>
+                    <a href="./contact.html" class="btn btn-outline-light">Contact</a>
                 </div>
             </nav>
             <div class="register-hero-section">
@@ -70,36 +70,76 @@
 
         <div class="row">
             <div class="col">
-                <div class="mb-3">
-                    <label class="form-label" for="txtService">Service:</label>
-                    <input type="type" id="txtService" class="form-control">
-                </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="txtService">Service:</label>
+                        <select class="form-select" id="txtService">
+                        <option value="" diabled selected>--select a service--</option>
+                        <option value="Grooming">Grooming</option>
+                        <option value="Vaccines">Vaccines</option>
+                        <option value="Nails">Nails</option>
+                        </select>
+                    </div>
             </div>
 
-        <div class="col">
-            <div class="mb-3">
-                <label class="form-label" for="txtType">Type:</label>
-                <input type="type" id="txtType" class="form-control">
+            <div class="col">
+                <div class="mb-3">
+                    <label class="form-label" for="txtType">Type:</label>
+                    <input type="type" id="txtType" class="form-control">
+                </div>
             </div>
         </div>
-        
+
         <div class="row">
             <div class="col">
-                <div class="button-set">
-                <button type="button" class="btn btn-outline-dark" id="registerPet" onclick="register()">Register</button>
-                <button type="button" class="btn btn-outline-dark" id="Clear" onclick="clearForm()">Clear form</button>
+                <div class="mb-3">
+                    <label class="form-label" for="txtColor">Color:</label>
+                    <input type="type" id="txtColor" class="form-control">
                 </div>
             </div>
-        </div>
-        <br>
-        <br>
-            <hr>
-            <div id="pets" class="container row">
-                <h2>Registered pets</h2>
+
+            <div class="col"><!--empty col-->
+                <div class="mb-3"> 
+            </div>
             </div>
         </div>
 
+
+        <div class="row">
+            <div class="col">
+                <div class="mb-3">
+                    <div class="button-set">
+                        <button type="button" class="btn btn-outline-dark" id="registerPet" onclick="register()">Register</button>
+                        <button type="button" class="btn btn-outline-dark" id="Clear" onclick="clearForm()">Clear form</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <br>
+            <hr>
+            <br>
+            <h2>Registered pets</h2>
+ 
+                <div>
+                    <p>Total Service: <span id="total">0</span></p>
+                    <p>Grooming <span id="gTotal">0</span></p>
+                    <p>Vaccines <span id="vTotal">0</span></p>
+                    <p>Nails <span id="nTotal">0</span></p>
+                </div>
+
+                <div id="pets" class="container-row">
+
+                </div>
+
+        </div>
+
+
+
     </main>
+
+
 
         <!-- Footer -->    
         <footer>

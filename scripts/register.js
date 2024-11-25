@@ -85,7 +85,6 @@ function register(){
     let inputService=document.getElementById("txtService").value;
     let inputType=document.getElementById("txtType").value;
     let inputColor=document.getElementById("txtColor").value;
-    console.log(inputName,inputAge,inputGender,inputBreed,inputService, inputType, inputColor);
 
     //create the obj
     let newPet = new Pet (inputName,inputAge,inputGender,inputBreed,inputService, inputType, inputColor);

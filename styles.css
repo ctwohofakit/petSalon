@@ -2,11 +2,23 @@
     margin:0px;
 }
 
-body {
+body{
+    background-color: rgb(247, 240, 232);
+
+}
+
+.index-body {
     background: linear-gradient(-45deg, #ee7752, #ea65f7, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
+    background-size: 400% 400%;
 	height: 100vh;
-	animation: gradient 10s ease infinite;
+	animation: gradient 15s ease infinite;
+}
+
+.page-header{
+    background: linear-gradient(-45deg, #ee7752, #ea65f7, #23a6d5, #23d5ab);
+    height: 10vh;
+    background-size: 200% 200%;
+    animation: gradient 10s ease infinite;
 }
 
 /*animation*/
@@ -70,7 +82,7 @@ to {
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 10px 10px;
-    padding: 20px;
+    padding: 50px;
 
 }
 .hero-text{
@@ -442,10 +454,19 @@ footer {
     text-align: center;
     display: flex;
     flex-direction: column;
-    height: 110vh;
+    height: 150vh;
 }
 .register-btns{
     display: inline;
+}
+
+.serviceCount{
+    background-color: #d8d8da;
+    padding: 10px;
+    font-size:18px;
+}
+.serviceCount p{
+    font-weight:bold;
 }
 
 .register-footer{
@@ -533,13 +554,17 @@ footer {
 
 }
 
+
 .contact-form {
     height: 53vh;
+    width: 60%;
     margin: 50px auto;
     padding: 30px;
     background-color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    animation: fadein 2s ease-in;
+
 }
 
 /* Form Title */
@@ -568,6 +593,7 @@ footer {
 }
 
 /* Submit Button */
+
 .contact-form button {
     width: 100%;
     padding: 10px;
@@ -583,12 +609,105 @@ footer {
     background-color: #141618;
 }
 .content-grid-3{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     background-color: rgb(247, 240, 232);
     margin-left: auto;
     margin-right: auto;
+    height: 210vh;
 }
+
 .table{
     margin:0;
     padding: 0;
 }
+
+.grid-container{
+    margin-left: 10%;
+    margin-right: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    animation: fadein 5s ease-in;
+}
+
+.info-section{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.info-section hr{
+    border-top: dotted 2px;
+}
+.top-info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 10px;
+}
+
+.top-info h1{
+    padding: 10px;
+    color:rgb(45, 62, 121);
+}
+
+.info-head{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+.top-row{
+    display: flex;
+}
+
+.info-head img{
+    width:25px;
+    height:25px;
+    margin-right: 5px;
+}
+
+
+.location{
+    text-align: center;
+    color:rgb(45, 62, 121);
+    margin-left: 15%;
+}
+
+.faq-section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.faq-section h1{
+    color:rgb(45, 62, 121);
+    padding: 10px;
+}
+.accordion-body{
+    text-align: left;
+}
+
+
+
+
+
+
+/*Service Page*/
+.servicePage{
+    padding: 80px;
+    padding: 250px;
+    background-color: rgb(247, 240, 232);
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 130vh;
+}
+

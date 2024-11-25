@@ -57,7 +57,7 @@ function displayRow(){
             <table id="registerTable" class="table table-sm table-dark">
             <thead>
                 <tr id="${i}">
-                    <th scope="row">${i}</th>
+                    <td scope="row">${i+1}</td>
                     <td>${pet.name}</td>
                     <td>${pet.breed}</td>
                     <td>${pet.age}</td>
@@ -72,13 +72,9 @@ function displayRow(){
         `;
     }
     petRows.innerHTML = rows;
-    displayInfo()
+    displayInfo();
 
 }
-
-
-
-
 
 
 

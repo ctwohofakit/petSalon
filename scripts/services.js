@@ -1,4 +1,6 @@
-let services=[];
+let inputDes=$("#txtDescription");
+let inputPrice=$("#txtPrice");
+
 
 //constructor Service
 function Service(description, price) {
@@ -14,24 +16,24 @@ function validService(service){
     let isValidPrice = true;
     
     if(service.description == "") {
-    isValidDescription = false;
-    $("#txtDescription").addClass("error");
-    $("#descRequiredDes").show();
+        isValidDescription = false;
+        $("#txtDescription").addClass("error");
+        $("#descRequiredDes").show();
     }else {
-    isValidDescription = true
-    $("#txtDescription"). removeClass("error");
-    $("#descRequiredDes").hide();
+        isValidDescription = true
+        $("#txtDescription"). removeClass("error");
+        $("#descRequiredDes").hide();
     }
 
     if(service.price == "") {
         isValidPrice = false;
         $("#txtPrice").addClass("error");
         $("#descRequiredPrice").show();
-        }else {
+    }else {
         isValidPrice = true
         $("#txtPrice"). removeClass("error");
         $("#descRequiredPrice").hide();
-        }
+    }
 
     // service.price validation
     
@@ -41,23 +43,14 @@ function validService(service){
 
 //use jQuery
 function register(){
-    let inputDes=$("#txtDescription").val();
-    let inputPrice=$("#txtPrice").val();
-    console.log(inputDes, inputPrice);
+    let newService= new Service(inputDes.val(), inputPrice.val());
+    if (validService(newService)){
+        save(newService);
 
-    //create object
-    let newService= new Service(inputDes, inputPrice);
+        $("input").val(""); //clear the form-Jquery
+        //displayServices();
 
-    if (validService(newService)==true){//check field validation
-        services.push(newService);
-
-        console.log(services);
-
-        displayServices();
-        clearSerForm();
     }
-
-
 
 }
 
@@ -66,22 +59,17 @@ function register(){
 function clearSerForm(){
     $("#txtDescription").val("");
     $("#txtPrice").val("");
+     //clear the form
 
 }
 
 
 //hook events
 function init(){
-    let service1 =new Service("Bathing",35);
-    let service2 =new Service("Grooming",75);
-    let service3 =new Service("Nails",25);
-    services.push(service1, service2, service3);
 
-    displayServices();
-
-    $("#Clear").on("click", function() {
-        clearSerForm();
-    });
+    //displayServices();
+    $("#registerServices").on("click", register);
+    $("#Clear").on("click", clearSerForm);
 
 }
 
@@ -90,7 +78,7 @@ function init(){
 
 
 
-
+/*
 function displayServices(){
     let table =$("#servicesDisplay");
     let result=`
@@ -131,8 +119,9 @@ function displayServices(){
 
 
 }
+    */
 
-//delete function
+/*delete function
 function deleteService(serviceId){
     console.log("delete service"+ serviceId);
     $("serviceId").remove;
@@ -140,7 +129,7 @@ function deleteService(serviceId){
 
     displayServices();
 
-}
+}*/
 
 
 

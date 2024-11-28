@@ -92,7 +92,6 @@ let nails=0;
 totalDiv.innerHTML= pets.length;// total pets
 
     for(let i=0; i<pets.length; i++){
-        console.log(pets[i].service); 
 
         if(pets[i].service=="Grooming"){//grooming
             grooming++;

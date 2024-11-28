@@ -121,14 +121,30 @@ function clearForm(){
 
 //delete fucntion
 function deletePet(petId){
-    console.log("Delete pets"+petId);
-    document.getElementById(petId).remove;
-    pets.splice(petId,1);//start point
+    console.log("Delete pets at index "+ petId);
+    pets.splice(petId,1);//start point, deleteCount
     
-    //displayPet();
     displayRow();
     displayInfo(petId);
 }
+
+
+//Get services from local storage
+function getServices(){
+    let services=read();
+    let option="";
+
+    for(let i=0; i<services.length; i++){
+        let service= services[i];
+
+        option+=`
+        <option value="${service.description}">${service.description} - $${service.price}</option>
+        `
+    }
+    $("#txtService").append(option);
+
+}
+
 
 
 
@@ -145,7 +161,20 @@ function init(){
 
     //displayPet();
     displayRow();
+    getServices();
 
+    //dark mode button
+    // $("#mode").on("click", function() {
+    //     if($("body").css("background-color") === 'rgb(0, 0, 0)'){
+    //     console. log(" *** Dark mode *** ");
+    //     $("body").css("background-color", "white");
+    //     $(this).text ("Dark mode");
+    //     }else {
+    //     console. log(" *** Light mode *** ");
+    //     $("body").css("color", "gray").css("background-color","black");
+    //     $(this).text("Light mode");
+    //     }
+    // });
 }
 
 window.onload=init;//wait to render the HTML

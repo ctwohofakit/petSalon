@@ -48,7 +48,7 @@ function register(){
         save(newService);
 
         $("input").val(""); //clear the form-Jquery
-        //displayServices();
+        displayServices();
 
     }
 
@@ -70,6 +70,7 @@ function init(){
     //displayServices();
     $("#registerServices").on("click", register);
     $("#Clear").on("click", clearSerForm);
+    displayServices();
 
 }
 
@@ -78,7 +79,7 @@ function init(){
 
 
 
-/*
+
 function displayServices(){
     let table =$("#servicesDisplay");
     let result=`
@@ -99,6 +100,7 @@ function displayServices(){
     //only use jQuery throughout 
 
     let serviceRows=$("#serviceRows");
+    let services=read();
     let rows="";
     for(let i=0; i<services.length; i++){
         let service = services[i];
@@ -118,18 +120,27 @@ function displayServices(){
     serviceRows.html(rows);
 
 
+
 }
-    */
+    
 
-/*delete function
-function deleteService(serviceId){
-    console.log("delete service"+ serviceId);
-    $("serviceId").remove;
-    services.splice(serviceId,1)
+//delete function try to delete select row
+function deleteService(serviceId) {
+    console.log("Deleting service at index: " + serviceId);
 
+    // Get the services array from localStorage
+    let services = read();
+
+    // Remove the index from the javascript[array]
+    services.splice(serviceId, 1);
+
+    // Save the updated array back to localStorage
+    localStorage.setItem("services", JSON.stringify(services));
+
+    // Refresh the displayed list
     displayServices();
+}
 
-}*/
 
 
 

@@ -54,6 +54,18 @@ to {
 }
 }
 
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(-200px);
+    } 
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    }
+
+
 .top-bar{
     padding: 20px;
     font-size: 20px;
@@ -733,6 +745,7 @@ footer {
 
 .about-hero img{
     height: auto; 
+    margin-top: 20px;
     width: 100%;
     display: block;
     filter: drop-shadow(50px 20px 25px rgba(0, 0, 0, 0.5));/* drop shadow on transpareant image */
@@ -772,15 +785,15 @@ footer {
     display: inline-block;
     text-align: center;
     width: 50px;
+    padding: 10px;
     height: 50px;
 }
 
 
 
 .about-content {
-    margin-top: 70px;
+    margin-top: 30px;
     display: flex;
-    padding: 50px;
     background-color: rgb(223, 215, 206);
 
 }
@@ -789,8 +802,8 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10%;
-    padding: 40px;
+    margin-top: 5%;
+    padding: 60px;
 }
 .about-txt h{
     padding: 30px;
@@ -799,13 +812,18 @@ footer {
 .about-txt p{
     font: 24px;
     text-align: left;
+    padding: 60px;
 }
 
 .about-txt-img{
-    border-radius: 15px;
+    padding: 30px;
     filter: drop-shadow(40px 20px 25px rgba(0, 0, 0, 0.5))invert(5%);;
-    /* animation: slideLeft 10s ease; */
+    animation: slideLeft 10s ease;
+    transition-delay: 0.5s;
+    border-radius: 50px;
 }
+
+
 .logo-set{
     display: inline-block;
     text-align: center;
@@ -820,6 +838,27 @@ footer {
     margin-top: 30px;
     display: flex;
     padding: 50px;
+}
 
+.about-txt-img-2{
+    padding: 30px;
+    filter: drop-shadow(40px 20px 25px rgba(0, 0, 0, 0.5))invert(5%);;
+    animation: slideRight 15s ease;
+    transition-delay: 1s;
+    border-radius: 50px;
+}
 
+.about-txt-img-3{
+    padding: 30px;
+    filter: drop-shadow(40px 20px 25px rgba(0, 0, 0, 0.5))invert(5%);;
+    animation: slideLeft 18s ease;
+    transition-delay: 1.5s;
+    border-radius: 50px;
+}
+.about-txt-img-4{
+    padding: 30px;
+    filter: drop-shadow(40px 20px 25px rgba(0, 0, 0, 0.5))invert(5%);;
+    animation: slideRight 20s ease;
+    transition-delay: 5s;
+    border-radius: 50px;
 }

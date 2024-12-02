@@ -10,7 +10,7 @@ body{
 .index-body {
     background: linear-gradient(-45deg, #ee7752, #ea65f7, #23a6d5, #23d5ab);
     background-size: 400% 400%;
-	height: 100vh;
+	height: 200vh;
 	animation: gradient 15s ease infinite;
 }
 
@@ -132,7 +132,7 @@ to {
     }
     body {
         background: linear-gradient(-45deg, #ee7752, #ea65f7, #23a6d5, #23d5ab);
-        height: 100vh;
+        height: 180vh;
         animation: gradient 10s ease infinite;
     }
 
@@ -470,7 +470,7 @@ footer {
     text-align: center;
     display: flex;
     flex-direction: column;
-    height: 150vh;
+    height: 180vh;
 }
 .register-btns{
     display: inline;
@@ -630,12 +630,15 @@ footer {
     background-color: rgb(247, 240, 232);
     margin-left: auto;
     margin-right: auto;
-    height: 210vh;
+    height: 230vh;
 }
+
+
 
 .table{
     margin:0;
-    padding: 0;
+    padding: 10%;
+
 }
 
 .grid-container{
@@ -700,6 +703,9 @@ footer {
     padding-left: 15%;
     padding-right: 15%;
 }
+.accordion{
+    height: 100%;position:relative;
+}
 
 .faq-section h1{
     color:rgb(45, 62, 121);
@@ -708,7 +714,6 @@ footer {
 .accordion-body{
     text-align: left;
 }
-
 
 
 
@@ -784,9 +789,9 @@ footer {
 .about-bar-set img{
     display: inline-block;
     text-align: center;
-    width: 50px;
+    width: 80px;
     padding: 10px;
-    height: 50px;
+    height: 80px;
 }
 
 
@@ -829,8 +834,8 @@ footer {
     text-align: center;
 }
 .about-logo{
-    padding: 10px;
-    width:8%;
+    padding: 5px;
+    width:5%;
 
 }
 
@@ -841,7 +846,8 @@ footer {
 }
 
 .about-txt-img-2{
-    padding: 30px;
+
+    padding: 20px;
     filter: drop-shadow(40px 20px 25px rgba(0, 0, 0, 0.5))invert(5%);;
     animation: slideRight 15s ease;
     transition-delay: 1s;
